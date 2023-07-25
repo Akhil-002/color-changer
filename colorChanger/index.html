@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="body">
+    <style>
+        .party{
+            margin-top: 10%;
+            font-size: 120px;
+            text-align: center;
+            color: white;
+        }
+       
+    </style>
+    <div class="party">Party</div>
+    <script>
+        function changeColor() {
+            const w =[
+  "Rock the party",
+  "Let's rock the party!",
+  "Time to rock this party!",
+  "Get ready to rock the house!",
+  "We're going to rock this place!",
+  "Let's make this party rock!",
+  "It's party time, let's rock it!",
+  "Get on the dance floor and rock it!",
+  "We're here to rock the night away!",
+  "Everybody, let's rock this party together!",
+  "Put on your dancing shoes, and let's rock it out!"
+];
+        const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 11)];
+            }
+
+            t = w[Math.floor(Math.random()*10)]
+            document.body.style.backgroundColor = color;
+            document.getElementsByTagName("div")[0].textContent=t
+            }
+        
+
+        setInterval(changeColor, 250);
+    </script>
+    
+</body>
+</html>
